@@ -1,0 +1,541 @@
+/* ================= БАЗОВЫЕ СТИЛИ ================= */
+:root {
+    --primary-color: #ff7e5f;
+    --primary-hover: #e86a4a;
+    --dark-color: #2d2d2d;
+    --light-color: #f9f9f9;
+    --text-color: #555;
+    --border-color: #ddd;
+    --white: #ffffff;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark-color);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: var(--transition);
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn--primary {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.btn--primary:hover {
+    background: var(--primary-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(255, 126, 95, 0.4);
+}
+
+.btn--outline {
+    background: transparent;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn--outline:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section--bg {
+    background-color: var(--light-color);
+}
+
+.section__title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: var(--dark-color);
+    position: relative;
+}
+
+.section__title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* ================= HEADER ================= */
+.header {
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+}
+
+.logo:hover {
+    color: var(--primary-color);
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 500;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav__link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: var(--transition);
+}
+
+.nav__link:hover::after {
+    width: 100%;
+}
+
+.nav__link:hover {
+    color: var(--primary-color);
+}
+
+/* ================= HERO ================= */
+.hero {
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero__content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero__title {
+    font-size: 54px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+}
+
+.hero__text {
+    font-size: 18px;
+    color: var(--text-color);
+    margin-bottom: 40px;
+}
+
+/* ================= STEPS (Сетка) ================= */
+.steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.step {
+    background: var(--white);
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.step:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.step__number {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 auto 20px;
+}
+
+.step__title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.step__text {
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+/* ================= PORTFOLIO ================= */
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.portfolio-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.portfolio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ИСПРАВЛЕННЫЙ КЛАСС ДЛЯ КАРТИНОК */
+.portfolio-card__img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: var(--transition);
+}
+
+.portfolio-card:hover .portfolio-card__img {
+    filter: brightness(0.9);
+}
+
+.portfolio-card__info {
+    padding: 20px;
+}
+
+.portfolio-card__info h3 {
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.portfolio-card__info p {
+    color: var(--text-color);
+    font-size: 15px;
+}
+
+/* ================= CALCULATOR ================= */
+.calculator {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+.calculator__label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    margin-top: 15px;
+}
+
+.calculator__label:first-child {
+    margin-top: 0;
+}
+
+.calculator__input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: var(--transition);
+    outline: none;
+}
+
+.calculator__input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(255, 126, 95, 0.2);
+}
+
+.calculator__btn {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.calculator__result {
+    background: var(--light-color);
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.calculator__result-title {
+    font-size: 20px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.calculator__price {
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    transition: var(--transition);
+}
+
+.calculator__note {
+    font-size: 13px;
+    color: #888;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background: var(--dark-color);
+    color: var(--white);
+    padding: 50px 0;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__logo {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.footer__text {
+    color: #aaa;
+}
+
+.footer__contacts p {
+    margin-bottom: 8px;
+    color: #ccc;
+}
+
+/* ================= МОДАЛЬНОЕ ОКНО ================= */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.active {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal__content {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal__close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.modal__close:hover {
+    color: var(--primary-color);
+}
+
+.modal__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.modal__text {
+    color: var(--text-color);
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.modal__input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    outline: none;
+    transition: var(--transition);
+}
+
+.modal__input:focus {
+    border-color: var(--primary-color);
+}
+
+.modal__input.error {
+    border-color: #ff3333;
+}
+
+.modal__error {
+    color: #ff3333;
+    font-size: 13px;
+    display: block;
+    margin-top: 5px;
+    min-height: 18px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= АДАПТИВНОСТЬ ================= */
+
+/* Планшеты */
+@media (max-width: 992px) {
+    .hero__title {
+        font-size: 42px;
+    }
+    
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .portfolio {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .calculator {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Мобильные */
+@media (max-width: 768px) {
+    .header__container {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+    
+    .nav__list {
+        gap: 15px;
+    }
+    
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .hero__title {
+        font-size: 32px;
+    }
+    
+    .section {
+        padding: 50px 0;
+    }
+    
+    .section__title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .portfolio {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer__container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    /* Кнопки на главном экране на мобильных могут переноситься */
+    .hero .btn {
+        display: block;
+        width: 100%;
+        margin: 10px 0 !important;
+    }
+}
