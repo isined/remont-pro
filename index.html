@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ремонт квартир под ключ | Улан-Удэ</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="header">
+        <!-- ПАНЕЛЬ ДОСТУПНОСТИ -->
+        <div class="accessibility-panel container">
+            <div class="accessibility-buttons">
+                <button id="btn-theme" title="Сменить тему">🌙 Тема</button>
+                <button id="btn-lang" title="Switch to English">🇬🇧 EN</button>
+                <button id="btn-visual" title="Версия для слабовидящих">👁️ Слабовидящим</button>
+                <button id="btn-speak" title="Озвучить страницу">🔊 Озвучить</button>
+            </div>
+        </div>
+
+        <div class="container header__container">
+            <a href="#" class="logo">
+                <span class="logo__icon">🏠</span> <span data-en="RemontPro">РемонтПро</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="#steps" class="nav__link" data-en="Stages">Этапы</a></li>
+                    <li><a href="#portfolio" class="nav__link" data-en="Portfolio">Портфолио</a></li>
+                    <li><a href="#calculator" class="nav__link" data-en="Calculator">Калькулятор</a></li>
+                </ul>
+            </nav>
+            <button class="btn btn--outline" type="button" id="open-modal-btn" data-en="Request a call">Заказать звонок</button>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- Главный экран -->
+        <section class="hero">
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <h1 class="hero__title" data-en="Turnkey apartment renovation">Ремонт квартир<br>под ключ</h1>
+                    <p class="hero__text" data-en="High-quality renovation of any complexity. We meet deadlines, fix the estimate in the contract. 3-year warranty.">Качественный ремонт любой сложности. Соблюдаем сроки, фиксируем смету в договоре. Гарантия на все работы 3 года.</p>
+                    <a href="#calculator" class="btn btn--primary" data-en="Calculate cost">Рассчитать стоимость</a>
+                    <button class="btn btn--outline" type="button" id="open-modal-btn-hero" style="margin-left: 15px;" data-en="Request a call">Заказать звонок</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция: Этапы ремонта -->
+        <section class="section" id="steps">
+            <div class="container">
+                <h2 class="section__title" data-en="Renovation stages">Этапы ремонта</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step__number">1</div>
+                        <h3 class="step__title" data-en="Measurement and estimate">Замер и смета</h3>
+                        <p class="step__text" data-en="We visit the site, take measurements and make an accurate estimate.">Выезжаем на объект, делаем замеры и составляем точную смету.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step__number">2</div>
+                        <h3 class="step__title" data-en="Demolition">Демонтаж</h3>
+                        <p class="step__text" data-en="We dismantle old coatings and remove construction debris.">Демонтируем старые покрытия и вывозим строительный мусор.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step__number">3</div>
+                        <h3 class="step__title" data-en="Rough work">Черновые работы</h3>
+                        <p class="step__text" data-en="Leveling walls, floor screed, electrical and plumbing.">Выравниваем стены, стяжка пола, электрика и сантехника.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step__number">4</div>
+                        <h3 class="step__title" data-en="Finishing">Чистовая отделка</h3>
+                        <p class="step__text" data-en="Puttying, painting, tiling and wallpaper. Final look.">Шпатлевка, покраска, укладка плитки и обоев. Финишный вид.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция: Портфолио -->
+        <section class="section section--bg" id="portfolio">
+            <div class="container">
+                <h2 class="section__title" data-en="Our works">Наши работы</h2>
+                <div class="portfolio">
+                    
+                    <div class="portfolio-card">
+                        <img src="images/1.jpg" alt="Ремонт 2-комнатной квартиры" class="portfolio-card__img">
+                        <div class="portfolio-card__info">
+                            <h3 data-en="2-room apartment">Квартира 2-комн.</h3>
+                            <p data-en="Residential complex 'Tsvetochny', 54 m². Scandinavian style.">ЖК "Цветочный", 54 м². Скандинавский стиль.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card">
+                        <img src="images/2.jpg" alt="Ремонт 1-комнатной квартиры" class="portfolio-card__img">
+                        <div class="portfolio-card__info">
+                            <h3 data-en="1-room apartment">Квартира 1-комн.</h3>
+                            <p data-en="Residential complex 'City', 38 m². Modern minimalism.">ЖК "Сити", 38 м². Современный минимализм.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card">
+                        <img src="images/3.jpg" alt="Ремонт 3-комнатной квартиры" class="portfolio-card__img">
+                        <div class="portfolio-card__info">
+                            <h3 data-en="3-room apartment">Квартира 3-комн.</h3>
+                            <p data-en="Residential complex 'Parkovy', 82 m². Turnkey renovation.">ЖК "Парковый", 82 м². Ремонт под ключ.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция: Калькулятор -->
+        <section class="section" id="calculator">
+            <div class="container">
+                <h2 class="section__title" data-en="Cost calculator">Калькулятор стоимости</h2>
+                <div class="calculator">
+                    <div class="calculator__form">
+                        <label for="area" class="calculator__label" data-en="Apartment area (m²):">Площадь квартиры (м²):</label>
+                        <input type="number" id="area" class="calculator__input" placeholder="Например: 50" min="1" value="50">
+                        
+                        <label for="repair-type" class="calculator__label" data-en="Renovation type:">Тип ремонта:</label>
+                        <select id="repair-type" class="calculator__input">
+                            <option value="cosmetic" data-en="Cosmetic (from 5000 ₽/m²)">Косметический (от 5 000 ₽/м²)</option>
+                            <option value="capital" data-en="Capital (from 9000 ₽/m²)">Капитальный (от 9 000 ₽/м²)</option>
+                            <option value="design" data-en="Design (from 15000 ₽/m²)">Дизайнерский (от 15 000 ₽/м²)</option>
+                        </select>
+
+                        <button id="calc-btn" class="btn btn--primary calculator__btn" type="button" data-en="Calculate">Рассчитать</button>
+                    </div>
+                    
+                    <div class="calculator__result">
+                        <h3 class="calculator__result-title" data-en="Estimated cost:">Примерная стоимость:</h3>
+                        <div class="calculator__price" id="total-price">250 000 ₽</div>
+                        <p class="calculator__note" data-en="* Exact cost is calculated after measurement">* Точная стоимость рассчитывается после замера</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__info">
+                <p class="footer__logo">🏠 <span data-en="RemontPro">РемонтПро</span></p>
+                <p class="footer__text" data-en="High-quality apartment renovation with a warranty.">Качественный ремонт квартир с гарантией.</p>
+            </div>
+            <div class="footer__contacts">
+                <p>📞 +7 (3012) 555-777</p>
+                <p>✉️ info@remontpro-uu.ru</p>
+                <p data-en="Ulan-Ude, Lenina st., 42">📍 г. Улан-Удэ, ул. Ленина, д. 42</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- МОДАЛЬНОЕ ОКНО -->
+    <div class="modal" id="callback-modal">
+        <div class="modal__content">
+            <span class="modal__close" id="close-modal-btn">&times;</span>
+            <h3 class="modal__title" data-en="Request a call">Заказать звонок</h3>
+            <p class="modal__text" data-en="Leave your number and we will call you back within 15 minutes!">Оставьте свой номер, и мы перезвоним вам в течение 15 минут!</p>
+            
+            <!-- ФОРМА С ПРИВЯЗКОЙ К FORMSPREE -->
+            <form id="callback-form" action="https://formspree.io/f/mbggdvkv" method="POST" class="modal__form">
+                <input type="text" id="phone" name="phone" class="modal__input" placeholder="+7 (999) 123-45-67" required>
+                <span class="modal__error" id="phone-error"></span>
+                <button type="submit" class="btn btn--primary" style="width: 100%; margin-top: 15px;" data-en="Waiting for a call">Жду звонка</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Подключение скрипта -->
+    <script src="js/script.js"></script>
+</body>
+</html>
